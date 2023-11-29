@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="dashboard2.css">
+    <title>Dashboard</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="header">
+            <div>
+                <img class="menuSVG" src="asserts/img/menu.svg" alt="Menu">
+                <span class="nome">Nome do sistema</span>
+                <img class="houseSVG" src="asserts/img/home.svg" alt="House">
+                <span>Dashboard</span>
+            </div>
+            <div>
+                <span class="perguntas">Perguntas Frequentes</span>
+                <img class="meiaLua" src="asserts/img/meiaLua.svg" alt="meiaLua">
+                <span class="borda"></span>
+                <img class="profile" src="asserts/img/profile.svg" alt="profile">
+                <span>User</span>
+            </div>
+        </div>
+
+        <div class="ajustar">
+            <div class="menu">
+                <a href="dashboard2.html">Dashboard</a>
+                <a href="EstimarVendas.html">Estimar Vendas</a>
+                <a href="#">Investimentos</a>
+                <a href="#">Custos Fixos</a>
+                <a href="#">Custos Variados</a>
+                <a href="MaoDeObra.html" class="pagAtual">Mão de Obra</a>
+                <a href="AjustarSazonalidade.html">Estimar sazonalidade</a>
+                <a href="#">Voltar para Projetos</a>
+            </div>
+
+            <div class="main">
+                <h2 class="titulo">Mão de Obra</h2>
+                <div class="row">
+                    <div class="col-5 pt-4">
+                        <label for="cargo">Cargo</label>
+                        <input type="text" name="cargo" id="txtcargo" class="form-control">
+                    </div>
+                    <div class="col-5 pt-4">
+                        <label for="provisao">Provisao</label>
+                        <input type="number" placeholder="Aviso previo (Salário mensal/ 12)" name="provisao" id="numberprovisao" class="form-control">
+                    </div>
+                    <div class="col-2 pt-4">
+                        <label for="encargo">Encargo</label>
+                        <input type="text" placeholder="FGTS" name="encargo" id="txtencargo" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-5 pt-4">
+                        <label for="colaboradores">Colaboradores</label>
+                        <input type="text" name="Colaboradores" id="txtColaboradores" class="form-control">
+                    </div>
+                    <div class="col-5 pt-4">
+                        <label for="colaboradores">13º</label>
+                        <input type="number" placeholder="13° (Salário mensal/ 12)" name="decimoTerceiro" id="decimoTerceiro" class="form-control">
+                    </div>
+                    <div class="col-2 pt-4">
+                        <input type="text" placeholder="INSS" name="inss" id="txtinss" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-5 pt-4"></div>
+                    <div class="col-5 pt-4">
+                        <label for="ferias">Férias</label>
+                        <input type="number" placeholder="Ferias ((Salário mensal/12) + (Salário mensal/12 *0,3))" name="ferias" id="numberferias" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-5 pt-4">
+                        <label for="beneficio">Benefício</label>
+                        <input type="number" placeholder="Alimentação (Valor unitário * Quantidade de dias)" name="alimentacao" id="txtAlimentacao" class="form-control">
+                    </div>
+                    <div class="col-5 pt-4">
+                        <label for="transporte">Transporte</label>
+                        <input type="number" placeholder="Transporte (Valor unitário * Quantidade de dias)" name="transporte" id="txtTransporte" class="form-control">
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Adicionar</button>
+
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cargo</th>
+                            <th scope="col">Provisões</th>
+                            <th scope="col">Aviso previo</th>
+                            <th scope="col">13º</th>
+                            <th scope="col">Férias</th>
+                            <th scope="col">Encargos</th>
+                            <th scope="col">Benefícios</th>
+                            <th scope="col">Projeção</th>
+                            <th scope="col">Total de custo</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Próximo</button>
+            </div>
+            <script src="main.js"></script>
+</body>
+
+</html>

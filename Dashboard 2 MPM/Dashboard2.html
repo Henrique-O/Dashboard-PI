@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="dashboard2.css">
+    <title>Dashboard</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="header">
+            <div>
+                <img class="menuSVG" src="asserts/img/menu.svg" alt="Menu">
+                <span class="nome">Nome do sistema</span>
+                <img class="houseSVG" src="asserts/img/home.svg" alt="House">
+                <span>Dashboard</span>
+            </div>
+            <div>
+                <span class="perguntas">Perguntas Frequentes</span>
+                <img class="meiaLua" src="asserts/img/meiaLua.svg" alt="meiaLua">
+                <span class="borda"></span>
+                <img class="profile" src="asserts/img/profile.svg" alt="profile">
+                <span>User</span>
+            </div>
+        </div>
+
+        <div class="ajustar">
+            <div class="menu">
+                <a href="dashboard2.html" class="pagAtual">Dashboard</a>
+                <a href="EstimarVendas.html">Estimar Vendas</a>
+                <a href="investimentos.html">Investimentos</a>
+                <a href="#">Custos Fixos</a>
+                <a href="#">Custos Variados</a>
+                <a href="MaoDeObra.html">Mão de Obra</a>
+                <a href="AjustarSazonalidade.html">Estimar sazonalidade</a>
+                <a href="#">Voltar para Projetos</a>
+            </div>
+
+            <div class="main">
+                <div class="infos">
+                    <span class="titulo">Fluxo de Caixa</span>
+                    <img class="aviso" src="asserts/img/Aviso.svg" alt="Aviso">
+                    <span class="textoAviso">Falta adicionar os dados de custos fixo para <br> a tabela exibir os dados
+                        corretos.</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="simplesNacional">
+                        <label class="form-check-label" for="simplesNacional">
+                            Simples Nacional
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="lucroPresumido">
+                        <label class="form-check-label" for="lucroPresumido">
+                            Lucro Presumido
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="lucroReal">
+                        <label class="form-check-label" for="lucroReal">
+                            Lucro Real
+                        </label>
+                    </div>
+                </div>
+
+                <div class="planilha">
+                    <table class="tableDash">
+                        <thead>
+                            <tr>
+                                <th class="coluna">Mês</th>
+                                <th class="coluna">Entrada</th>
+                                <th class="coluna">C. fixo Geral</th>
+                                <th class="coluna">M.O ADM</th>
+                                <th class="coluna">Custo operacional</th>
+                                <th class="coluna">Mkt digital</th>
+                                <th class="coluna">Tx cartao</th>
+                                <th class="coluna">Impostos</th>
+                                <th class="coluna">Saldo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="linha" id="celulaA1"></td>
+                                <td class="linha" id="celulaA2"></td>
+                                <td class="linha" id="celulaA3"></td>
+                                <td class="linha" id="celulaA4"></td>
+                                <td class="linha" id="celulaA5"></td>
+                                <td class="linha" id="celulaA6"></td>
+                                <td class="linha" id="celulaA7"></td>
+                                <td class="linha" id="celulaA8"></td>
+                                <td class="linha" id="celulaA9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaB1"></td>
+                                <td class="linha" id="celulaB2"></td>
+                                <td class="linha" id="celulaB3"></td>
+                                <td class="linha" id="celulaB4"></td>
+                                <td class="linha" id="celulaB5"></td>
+                                <td class="linha" id="celulaB6"></td>
+                                <td class="linha" id="celulaB7"></td>
+                                <td class="linha" id="celulaB8"></td>
+                                <td class="linha" id="celulaB9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaC1"></td>
+                                <td class="linha" id="celulaC2"></td>
+                                <td class="linha" id="celulaC3"></td>
+                                <td class="linha" id="celulaC4"></td>
+                                <td class="linha" id="celulaC5"></td>
+                                <td class="linha" id="celulaC6"></td>
+                                <td class="linha" id="celulaC7"></td>
+                                <td class="linha" id="celulaC8"></td>
+                                <td class="linha" id="celulaC9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaD1"></td>
+                                <td class="linha" id="celulaD2"></td>
+                                <td class="linha" id="celulaD3"></td>
+                                <td class="linha" id="celulaD4"></td>
+                                <td class="linha" id="celulaD5"></td>
+                                <td class="linha" id="celulaD6"></td>
+                                <td class="linha" id="celulaD7"></td>
+                                <td class="linha" id="celulaD8"></td>
+                                <td class="linha" id="celulaD9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaE1"></td>
+                                <td class="linha" id="celulaE2"></td>
+                                <td class="linha" id="celulaE3"></td>
+                                <td class="linha" id="celulaE4"></td>
+                                <td class="linha" id="celulaE5"></td>
+                                <td class="linha" id="celulaE6"></td>
+                                <td class="linha" id="celulaE7"></td>
+                                <td class="linha" id="celulaE8"></td>
+                                <td class="linha" id="celulaE9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaF1"></td>
+                                <td class="linha" id="celulaF2"></td>
+                                <td class="linha" id="celulaF3"></td>
+                                <td class="linha" id="celulaF4"></td>
+                                <td class="linha" id="celulaF5"></td>
+                                <td class="linha" id="celulaF6"></td>
+                                <td class="linha" id="celulaF7"></td>
+                                <td class="linha" id="celulaF8"></td>
+                                <td class="linha" id="celulaF9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaG1"></td>
+                                <td class="linha" id="celulaG2"></td>
+                                <td class="linha" id="celulaG3"></td>
+                                <td class="linha" id="celulaG4"></td>
+                                <td class="linha" id="celulaG5"></td>
+                                <td class="linha" id="celulaG6"></td>
+                                <td class="linha" id="celulaG7"></td>
+                                <td class="linha" id="celulaG8"></td>
+                                <td class="linha" id="celulaG9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaH1"></td>
+                                <td class="linha" id="celulaH2"></td>
+                                <td class="linha" id="celulaH3"></td>
+                                <td class="linha" id="celulaH4"></td>
+                                <td class="linha" id="celulaH5"></td>
+                                <td class="linha" id="celulaH6"></td>
+                                <td class="linha" id="celulaH7"></td>
+                                <td class="linha" id="celulaH8"></td>
+                                <td class="linha" id="celulaH9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaI1"></td>
+                                <td class="linha" id="celulaI2"></td>
+                                <td class="linha" id="celulaI3"></td>
+                                <td class="linha" id="celulaI4"></td>
+                                <td class="linha" id="celulaI5"></td>
+                                <td class="linha" id="celulaI6"></td>
+                                <td class="linha" id="celulaI7"></td>
+                                <td class="linha" id="celulaI8"></td>
+                                <td class="linha" id="celulaI9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaJ1"></td>
+                                <td class="linha" id="celulaJ2"></td>
+                                <td class="linha" id="celulaJ3"></td>
+                                <td class="linha" id="celulaJ4"></td>
+                                <td class="linha" id="celulaJ5"></td>
+                                <td class="linha" id="celulaJ6"></td>
+                                <td class="linha" id="celulaJ7"></td>
+                                <td class="linha" id="celulaJ8"></td>
+                                <td class="linha" id="celulaJ9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaK1"></td>
+                                <td class="linha" id="celulaK2"></td>
+                                <td class="linha" id="celulaK3"></td>
+                                <td class="linha" id="celulaK4"></td>
+                                <td class="linha" id="celulaK5"></td>
+                                <td class="linha" id="celulaK6"></td>
+                                <td class="linha" id="celulaK7"></td>
+                                <td class="linha" id="celulaK8"></td>
+                                <td class="linha" id="celulaK9"></td>
+                            </tr>
+                            <tr>
+                                <td class="linha" id="celulaL1"></td>
+                                <td class="linha" id="celulaL2"></td>
+                                <td class="linha" id="celulaL3"></td>
+                                <td class="linha" id="celulaL4"></td>
+                                <td class="linha" id="celulaL5"></td>
+                                <td class="linha" id="celulaL6"></td>
+                                <td class="linha" id="celulaL7"></td>
+                                <td class="linha" id="celulaL8"></td>
+                                <td class="linha" id="celulaL9"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Suponhamos que você tenha dados vindos do back-end em um formato de objeto JavaScript
+            const dadosDoBackEnd = {
+                celulaA1: 'Jan',
+                celulaA2: 'R$ xxxx.xx',
+                celulaA3: 'R$ xxxx.xx',
+                celulaA4: 'R$ xxxx.xx',
+                celulaA5: 'R$ xxxx.xx',
+                celulaA6: 'R$ xxxx.xx',
+                celulaA7: 'R$ xxxx.xx',
+                celulaA8: 'R$ xxxx.xx',
+                celulaA9: 'R$ xxxx.xx',
+
+                celulaB1: 'Fev',
+                celulaB2: 'R$ xxxx.xx',
+                celulaB3: 'R$ xxxx.xx',
+                celulaB4: 'R$ xxxx.xx',
+                celulaB5: 'R$ xxxx.xx',
+                celulaB6: 'R$ xxxx.xx',
+                celulaB7: 'R$ xxxx.xx',
+                celulaB8: 'R$ xxxx.xx',
+                celulaB9: 'R$ xxxx.xx',
+
+                celulaC1: 'Mar',
+                celulaC2: 'R$ xxxx.xx',
+                celulaC3: 'R$ xxxx.xx',
+                celulaC4: 'R$ xxxx.xx',
+                celulaC5: 'R$ xxxx.xx',
+                celulaC6: 'R$ xxxx.xx',
+                celulaC7: 'R$ xxxx.xx',
+                celulaC8: 'R$ xxxx.xx',
+                celulaC9: 'R$ xxxx.xx',
+
+                celulaD1: 'Abr',
+                celulaD2: 'R$ xxxx.xx',
+                celulaD3: 'R$ xxxx.xx',
+                celulaD4: 'R$ xxxx.xx',
+                celulaD5: 'R$ xxxx.xx',
+                celulaD6: 'R$ xxxx.xx',
+                celulaD7: 'R$ xxxx.xx',
+                celulaD8: 'R$ xxxx.xx',
+                celulaD9: 'R$ xxxx.xx',
+
+                celulaE1: 'Mai',
+                celulaE2: 'R$ xxxx.xx',
+                celulaE3: 'R$ xxxx.xx',
+                celulaE4: 'R$ xxxx.xx',
+                celulaE5: 'R$ xxxx.xx',
+                celulaE6: 'R$ xxxx.xx',
+                celulaE7: 'R$ xxxx.xx',
+                celulaE8: 'R$ xxxx.xx',
+                celulaE9: 'R$ xxxx.xx',
+
+                celulaF1: 'Jun',
+                celulaF2: 'R$ xxxx.xx',
+                celulaF3: 'R$ xxxx.xx',
+                celulaF4: 'R$ xxxx.xx',
+                celulaF5: 'R$ xxxx.xx',
+                celulaF6: 'R$ xxxx.xx',
+                celulaF7: 'R$ xxxx.xx',
+                celulaF8: 'R$ xxxx.xx',
+                celulaF9: 'R$ xxxx.xx',
+
+                celulaG1: 'Jul',
+                celulaG2: 'R$ xxxx.xx',
+                celulaG3: 'R$ xxxx.xx',
+                celulaG4: 'R$ xxxx.xx',
+                celulaG5: 'R$ xxxx.xx',
+                celulaG6: 'R$ xxxx.xx',
+                celulaG7: 'R$ xxxx.xx',
+                celulaG8: 'R$ xxxx.xx',
+                celulaG9: 'R$ xxxx.xx',
+
+                celulaH1: 'Ago',
+                celulaH2: 'R$ xxxx.xx',
+                celulaH3: 'R$ xxxx.xx',
+                celulaH4: 'R$ xxxx.xx',
+                celulaH5: 'R$ xxxx.xx',
+                celulaH6: 'R$ xxxx.xx',
+                celulaH7: 'R$ xxxx.xx',
+                celulaH8: 'R$ xxxx.xx',
+                celulaH9: 'R$ xxxx.xx',
+
+                celulaI1: 'Set',
+                celulaI2: 'R$ xxxx.xx',
+                celulaI3: 'R$ xxxx.xx',
+                celulaI4: 'R$ xxxx.xx',
+                celulaI5: 'R$ xxxx.xx',
+                celulaI6: 'R$ xxxx.xx',
+                celulaI7: 'R$ xxxx.xx',
+                celulaI8: 'R$ xxxx.xx',
+                celulaI9: 'R$ xxxx.xx',
+
+                celulaJ1: 'Out',
+                celulaJ2: 'R$ xxxx.xx',
+                celulaJ3: 'R$ xxxx.xx',
+                celulaJ4: 'R$ xxxx.xx',
+                celulaJ5: 'R$ xxxx.xx',
+                celulaJ6: 'R$ xxxx.xx',
+                celulaJ7: 'R$ xxxx.xx',
+                celulaJ8: 'R$ xxxx.xx',
+                celulaJ9: 'R$ xxxx.xx',
+
+                celulaK1: 'Nov',
+                celulaK2: 'R$ xxxx.xx',
+                celulaK3: 'R$ xxxx.xx',
+                celulaK4: 'R$ xxxx.xx',
+                celulaK5: 'R$ xxxx.xx',
+                celulaK6: 'R$ xxxx.xx',
+                celulaK7: 'R$ xxxx.xx',
+                celulaK8: 'R$ xxxx.xx',
+                celulaK9: 'R$ xxxx.xx',
+
+                celulaL1: 'Dez',
+                celulaL2: 'R$ xxxx.xx',
+                celulaL3: 'R$ xxxx.xx',
+                celulaL4: 'R$ xxxx.xx',
+                celulaL5: 'R$ xxxx.xx',
+                celulaL6: 'R$ xxxx.xx',
+                celulaL7: 'R$ xxxx.xx',
+                celulaL8: 'R$ xxxx.xx',
+                celulaL9: 'R$ xxxx.xx',
+            };
+
+            // Preencha as células com os dados do back-end
+            Object.keys(dadosDoBackEnd).forEach(celula => {
+                document.getElementById(celula).textContent = dadosDoBackEnd[celula];
+            });
+        </script>
+        <script src="https://kit.fontawesome.com/f07fda0370.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

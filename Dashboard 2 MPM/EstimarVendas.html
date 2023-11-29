@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="dashboard2.css">
+    <title>Dashboard</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="header">
+            <div>
+                <img class="menuSVG" src="asserts/img/menu.svg" alt="Menu">
+                <span class="nome">Nome do sistema</span>
+                <img class="houseSVG" src="asserts/img/home.svg" alt="House">
+                <span>Dashboard</span>
+            </div>
+            <div>
+                <span class="perguntas">Perguntas Frequentes</span>
+                <img class="meiaLua" src="asserts/img/meiaLua.svg" alt="meiaLua">
+                <span class="borda"></span>
+                <img class="profile" src="asserts/img/profile.svg" alt="profile">
+                <span>User</span>
+            </div>
+        </div>
+
+        <div class="ajustar">
+            <div class="menu">
+                <a href="dashboard2.html">Dashboard</a>
+                <a href="EstimarVendas.html" class="pagAtual">Estimar Vendas</a>
+                <a href="investimentos.html">Investimentos</a>
+                <a href="#">Custos Fixos</a>
+                <a href="#">Custos Variados</a>
+                <a href="MaoDeObra.html">Mão de Obra</a>
+                <a href="AjustarSazonalidade.html">Estimar sazonalidade</a>
+                <a href="#">Voltar para Projetos</a>
+            </div>
+
+            <div class="main">
+                <h2 class="titulo">Estimativa de vendas</h2>
+                <div class="row">
+                    <div class="col-5 pt-4">
+                        <label for="descricao">Descrição</label><br>
+                        <input type="text" name="descricao" id="txtdescricao" class="form-control">
+                    </div>
+                    <div class="col-5 pt-4">
+                        <label for="qtdVendasPeriodo">Quantas vendas por periodo (Obrigatório)</label><br>
+                        <input type="text" name="qtdVendasPeriodo" id="txtqtdVendasPeriodo" class="form-control">
+                    </div>
+                    <div class="col-2 pt-4">
+                        <label for="Periodo">Periodo</label>
+                        <input type="date" name="Periodo" id="datePeriodo" class="form-control">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 pt-4">
+                        <label for="precoVenda">Preço de cada venda (Obrigatório)</label><br>
+                        <input type="number" placeholder="R$ 000,00" name="precoVenda" id="numberprecoVenda"
+                            class="form-control">
+                    </div>
+                    <div class="col-6 pt-4">
+                        <label for="estimativaMax">Estimativa maxima de vendas</label><br>
+                        <input type="number" placeholder="R$ 000,00" name="estimativaMax" id="numberestimativaMax"
+                            class="form-control">
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block"
+                        onclick="adicionarLinha()">Adicionar</button>
+                </div>
+
+                <table class="table table-borderless" id="minhaTabela">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Período</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Projeção</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas da tabela serão adicionadas aqui -->
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Próximo</button>
+            </div>
+        </div>
+
+        <!-- Script para adicionar os dados na tabela -->
+        <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="dashboard2.css">
+    <title>Dashboard</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="header">
+            <div>
+                <img class="menuSVG" src="asserts/img/menu.svg" alt="Menu">
+                <span class="nome">Nome do sistema</span>
+                <img class="houseSVG" src="asserts/img/home.svg" alt="House">
+                <span>Dashboard</span>
+            </div>
+            <div>
+                <span class="perguntas">Perguntas Frequentes</span>
+                <img class="meiaLua" src="asserts/img/meiaLua.svg" alt="meiaLua">
+                <span class="borda"></span>
+                <img class="profile" src="asserts/img/profile.svg" alt="profile">
+                <span>User</span>
+            </div>
+        </div>
+
+        <div class="ajustar">
+            <div class="menu">
+                <a href="dashboard2.html">Dashboard</a>
+                <a href="EstimarVendas.html">Estimar Vendas</a>
+                <a href="investimentos.html">Investimentos</a>
+                <a href="#">Custos Fixos</a>
+                <a href="#">Custos Variados</a>
+                <a href="MaoDeObra.html">Mão de Obra</a>
+                <a href="AjustarSazonalidade.html" class="pagAtual">Estimar sazonalidade</a>
+                <a href="#">Voltar para Projetos</a>
+            </div>
+
+            <div class="main">
+                <div class="ExplicaSazo">
+                    <h2 class="titulo">Estimativa de Sazonalidade <img src="asserts/img/i.svg" alt="Mostrar detalhe"
+                            class="detalhe"></h2>
+                    <div class="explicacao" id="explicacaoBox">
+                        <p>Segundo o dicionário, o conceito de sazonalidade está relacionado às estações, ou seja, aos
+                            eventos que sempre acontecem em uma determinada época. No mundo empresarial, esse termo faz
+                            referência a fatores externos, que se repetem ao longo do ano e podem afetar os resultados
+                            financeiros.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 pt-4">
+                        <label for="primeiroMes">Primeiro mês</label>
+                        <input type="text" placeholder="Dez..." name="primeiroMes" id="txtprimeiroMes"
+                            class="form-control">
+                    </div>
+                    <div class="col-6 pt-4">
+                        <label for="nMeses">Número de meses</label>
+                        <input type="number" placeholder="36..." name="nMeses" id="numbernMeses" class="form-control">
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Ajustar Dados</button>
+
+                <h4 class="titulo2">Faturamento Max Estimado </h4>
+                <div class="row">
+                    <div class="col-6 pt-4">
+                        <label for="metaFaturamento">Meta de faturamento</label>
+                        <input type="text" placeholder="R$: 500.000,00" name="metaFaturamento" id="txtmetaFaturamento"
+                            class="form-control">
+                    </div>
+                    <div class="col-6 pt-4"></div>
+
+                </div>
+
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">Mês</th>
+                            <th scope="col">Sazonalidade mensal da demanda</th>
+                            <th scope="col">Faturamento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Out/23</td>
+                            <td>33%</td>
+                            <td>R$: 165.000,00 </td>
+                        </tr>
+                        <tr>
+                            <td>Nov/23</td>
+                            <td>40%</td>
+                            <td>R$: 200.000,00</td>
+                        </tr>
+                        <tr>
+                            <td> . </td>
+                            <td> . </td>
+                            <td> . </td>
+                        </tr>
+                        <tr>
+                            <td> . </td>
+                            <td> . </td>
+                            <td> . </td>
+                        </tr>
+                        <tr>
+                            <td> . </td>
+                            <td> . </td>
+                            <td> . </td>
+                        </tr>
+                        <tr>
+                            <td> . </td>
+                            <td> . </td>
+                            <td> . </td>
+                        </tr>
+                        <tr>
+                            <td> . </td>
+                            <td> . </td>
+                            <td> . </td>
+                        </tr>
+                        <tr>
+                            <td> . </td>
+                            <td> . </td>
+                            <td> . </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Enviar Dados</button>
+            </div>
+            <script src="main.js"></script>
+</body>
+
+</html>
